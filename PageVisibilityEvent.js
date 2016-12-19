@@ -22,6 +22,7 @@
   pv.SetCallback(visibilityChange);     //To Set (or Rest) a Callback
   pv.Disable();                         //To Disable
   pv.Enable();                          //To Re-Enable
+  pv.GetIsAtivceNow();                  //Return current status
 
   function visibilityChange(isActive){
      //isActive equal TRUE  means active;
@@ -29,7 +30,7 @@
   }
 */
 
-/* -------------WeiXinJS类的定义----------------- */
+/* --------------------------------------------- */
 var PageVisibilityEvent = function () {
 
     var targetCallback  = undefined;
@@ -49,6 +50,11 @@ var PageVisibilityEvent = function () {
     /* Re-Enable,then continue to fire callbak  */
     this._enable = function () {
         isEnable = true;
+    };
+
+    /* Get current status, is it 'ACTIVE' now. */
+    this._getIsAtivceNow = function () {
+        return (currentStatus == "visible");
     };
     
 
@@ -117,6 +123,12 @@ PageVisibilityEvent.prototype.Disable = function () {
 PageVisibilityEvent.prototype.Enable = function () {
     var instance = this;
     instance._enable();
+};
+
+/* Get current status, is it 'ACTIVE' now. */
+PageVisibilityEvent.prototype.GetIsAtivceNow = function () {
+    var instance = this;
+    return instance._getIsAtivceNow();
 };
 
 /* ---------------------------------------------*/
