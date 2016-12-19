@@ -15,6 +15,7 @@ provide the event deal with page **hidden/deactive** or **visible/active**, writ
   pv.SetCallback(visibilityChange);     //To Set (or Rest) a Callback
   pv.Disable();                         //To Disable
   pv.Enable();                          //To Re-Enable
+  pv.GetIsAtivceNow();                  //Return current status
 
   function visibilityChange(isActive){
      //isActive equal TRUE  means active;
