@@ -1,6 +1,6 @@
 /*
 * provide the event deal with page [hidden](deactive) or [visible](active), written by PURE JS.
-* http://github.com/doraemonyu/PageVisibilityEvent
+* https://github.com/DoraemonYu/JS-PageVisibilityEvent
 *
 * MIT licenses :)
 */
